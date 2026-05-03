@@ -351,7 +351,7 @@ def get_langchain_embedding_provider(provider: EmbeddingProvider, model_id: str 
     """
     if provider == EmbeddingProvider.OPENAI:
         from langchain_openai import OpenAIEmbeddings
-        return OpenAIEmbeddings()
+        return OpenAIEmbeddings(model='text-embedding-3-small')
     elif provider == EmbeddingProvider.COHERE:
         from langchain_cohere import CohereEmbeddings
         return CohereEmbeddings()
